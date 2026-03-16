@@ -40,7 +40,7 @@ Prototype sistem Machine Learning dibangun menggunakan **Streamlit**. Aplikasi i
 1. **Prediksi Tunggal:** User dapat memasukkan 6 parameter terpenting (seperti Status Uang Kuliah, Beasiswa, dan Nilai Semester) melalui *form interface* untuk memprediksi status satu mahasiswa.
 2. **Prediksi Massal:** User dapat mengunggah *file* data mentah (`.csv`) berisi 36 kolom dari ratusan mahasiswa sekaligus. Sistem akan memproses dan mengeluarkan *output* file yang dapat diunduh lengkap dengan hasil prediksinya.
 
-**Link Dashboard:** [[Streamlit](https://student-dropout-prediction-kwsuvky7f8zhlrdn2ky7pd.streamlit.app/)] 
+**Link Streamlit:** [[Streamlit](https://student-dropout-prediction-kwsuvky7f8zhlrdn2ky7pd.streamlit.app/)] 
 
 ## Conclusion
 Dari hasil proses analisis data dan pemodelan yang telah dilakukan, dapat ditarik beberapa kesimpulan utama:
