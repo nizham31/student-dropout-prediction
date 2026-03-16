@@ -19,14 +19,43 @@ Proyek ini mencakup siklus penuh *Data Science* (*End-to-End*), meliputi:
 
 ### Persiapan
 
-Sumber data: Dataset "Students' Performance" yang berisi rekam jejak demografi, finansial, dan akademik mahasiswa dari Jaya Jaya Institut (Tersedia dalam format `.csv`).
+Sumber data: Dataset "Students' Performance" yang berisi rekam jejak demografi, finansial, dan akademik mahasiswa dari Jaya Jaya Institut (Tersedia dalam format `.csv`)
+**Link Dataset:** [[Dataset](https://github.com/dicodingacademy/dicoding_dataset/blob/main/students_performance/data.csv)] 
 
-Setup Environment:
+.
 
-pergi ke direkttori projek 
-jalankan
+### Setup Environment:
+- buka terminal, lalu pergi ke direktori projek dengan menggunakan CD
+contoh 'CD path/to/projek/direktory'
+
+- opsional menggunakan conda 
+aktifkan conda dengan 'conda activate [nama env]
+
+- lalu jalankan
 'pip install -r requairement.txt'
 
+- setelah library terinstall, buka terminal baru dan jalankan : 
+'streamlit run app.py'
+
+- atau run file app.py dari visual studio code atau IDE lain nya
+
+saat website nya terbuka, 
+#### Tata cara penggunaan aplikasi 
+1. Tab Prediksi Tunggal (Input Manual)
+- Tab ini digunakan untuk memprediksi status satu mahasiswa secara cepat.
+- Isi form parameter yang tersedia (Status Pembayaran Uang Kuliah, Status Beasiswa, Jumlah SKS Lulus di Semester 1 & 2, serta Nilai IP di Semester 1 & 2).
+- Klik tombol "Prediksi Sekarang 🚀".
+Sistem akan memproses data dan langsung menampilkan peringatan apakah mahasiswa tersebut diprediksi akan Dropout, tetap Enrolled, atau berhasil Graduate.
+
+2. Tab Prediksi Massal (Upload CSV)
+- Tab ini digunakan untuk melakukan deteksi dini pada ratusan data mahasiswa sekaligus.
+- Siapkan file .csv yang berisi 36 kolom fitur mahasiswa (format sama seperti dataset asli data.csv, namun tanpa kolom target Status).
+- Tarik dan letakkan (atau browse) file CSV tersebut ke area "Upload File CSV".
+- Klik tombol "Mulai Prediksi Massal 🔍".
+- Sistem akan menjalankan model pada seluruh baris data dan menambahkan kolom baru bernama Prediksi_Status.
+Setelah selesai, Anda dapat melihat cuplikan tabel hasilnya dan mengunduh hasil prediksi lengkap dengan menekan tombol "Download Hasil Prediksi (CSV) 📥".
+
+atau akses aplikasi secara online menggunakan streamlit pada link berikut [Streamlit](https://student-dropout-prediction-kwsuvky7f8zhlrdn2ky7pd.streamlit.app/)
 ## Business Dashboard
 Business Dashboard telah dibangun menggunakan **Looker Studio** untuk memberikan kemudahan bagi manajemen Jaya Jaya Institut dalam memonitor profil mahasiswa. Dashboard ini menyoroti beberapa faktor paling krusial penyebab *dropout* berdasarkan hasil analisis data, yaitu:
 - **Tunggakan Uang Kuliah:** Visualisasi *Stacked Bar Chart* yang menunjukkan bahwa mayoritas mahasiswa yang menunggak pembayaran uang kuliah berujung pada status *Dropout*.
